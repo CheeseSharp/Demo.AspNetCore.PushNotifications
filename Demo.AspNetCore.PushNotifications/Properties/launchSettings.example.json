@@ -1,0 +1,17 @@
+{
+  "profiles": {
+    "Demo.AspNetCore.PushNotifications": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "https://push-ui.graffic-jam.digital.local:7110",
+      "environmentVariables": {
+        "ASPNETCORE_Kestrel__Certificates__Default__Path": "../certs/wildcard.graffic-jam.digital.local.pfx",
+        "ASPNETCORE_URLS": "https://push-ui.graffic-jam.digital.local:7110",
+        "ASPNETCORE_Kestrel__Certificates__Default__Password": "<PASSWORD>",
+        "ASPNETCORE_HTTPS_PORT": "7110",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://push-ui.graffic-jam.digital.local:7110"
+    }
+  }
+}

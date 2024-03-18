@@ -26,10 +26,11 @@
             });
         },
         storePushSubscription: function (pushSubscription) {
+            const subscribe = JSON.stringify(pushSubscription);
             return fetch('push-notifications-api/subscriptions', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(pushSubscription)
+                body: subscribe
             });
         },
         discardPushSubscription: function (pushSubscription) {
