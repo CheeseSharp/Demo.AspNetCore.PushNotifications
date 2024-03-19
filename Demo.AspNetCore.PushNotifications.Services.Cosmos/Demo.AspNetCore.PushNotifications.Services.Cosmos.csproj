@@ -6,7 +6,7 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Lib.Net.Http.WebPush" Version="3.2.0" />
+    <PackageReference Include="Lib.Net.Http.WebPush" Version="3.2.1" />
     <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.24.0" />
   </ItemGroup>
   <ItemGroup>

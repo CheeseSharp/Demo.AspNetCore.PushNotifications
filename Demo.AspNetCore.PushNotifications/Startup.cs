@@ -24,6 +24,10 @@ namespace Demo.AspNetCore.PushNotifications
                 .AddPushNotificationService(Configuration)
                 .AddPushNotificationsQueue();
 
+            services.AddCors(p => p.AddPolicy("corsapp", builder =>
+            {
+                builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+            }));
             services.AddControllersWithViews(options =>
             {
                 options.InputFormatters.Add(new TextPlainInputFormatter());
@@ -45,6 +49,7 @@ namespace Demo.AspNetCore.PushNotifications
             defaultFilesOptions.DefaultFileNames.Clear();
             defaultFilesOptions.DefaultFileNames.Add("push-notifications.html");
 
+            app.UseCors("corsapp");
             app.UseDefaultFiles(defaultFilesOptions)
                 .UseStaticFiles()
                 .UsePushSubscriptionStore()
